@@ -1,0 +1,30 @@
+These files complement the article
+	
+	"Fully Flexible Extreme Views"
+	by A. Meucci, D. Ardia, S. Keel
+	available at www.ssrn.com
+
+The most recent version of this code is available at
+	MATLAB Central - File Exchange
+
+
+Run the scripts 
+
+- S_Grid_vs_MonteCarlo. This script compares the performance of 
+	plain Monte Carlo versus grid in applying Entropy Pooling to process extreme views
+
+- S_CVaR_Recursion. This script illustrates the discrete Newton recursion 
+	to process views on CVaR according to Entropy Pooling
+
+- S_Case_Study. This script estimates the prior of a hedge fund return
+	and processes extreme views on CVaR according to Entropy Pooling
+	IMPORTANT - This script is about the methodology, not the input data, which has been modified
+
+- "S_GaussHermite_Grid. This script plots the zeros of the first 
+	N Gauss-Hermite polynomials to compute an even mesh of N points
+	that is slightly more concentrated in the body than in the tails
+
+
+No claim of accuracy is made and no responsibility is taken for possible errors.
+These files can and must be used and distributed freely. Please quote the authors.
+	!!! Feedback is highly appreciated !!!
