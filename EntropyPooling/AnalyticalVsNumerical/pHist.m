@@ -1,4 +1,4 @@
-function h=pHist(X,p,nBins)
+function [h, f]=pHist(X,p,nBins)
 
 [n,x] = hist(X,nBins);
 D=x(2)-x(1);

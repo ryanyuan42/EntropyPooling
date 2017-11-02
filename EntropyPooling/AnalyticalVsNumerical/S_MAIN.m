@@ -19,7 +19,7 @@ r=.6;
 Sigma=(1-r)*eye(N)+r*ones(N,N);
 
 % numerical representation
-J=100;
+J=100000;
 p = ones(J,1)/J;
 dd = mvnrnd(zeros(N,1),Sigma,J/2);
 X=ones(J,1)*Mu'+[dd;-dd];

@@ -58,7 +58,7 @@ J = length(X);
 % Entropy posterior from extreme view on mean and CVaR
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 view = [];
-view.mu   = mean(xi) - 1.0; 
+view.mu   = mean(xi) - 1.0;  
 view.CVaR95 = market.CVaR95 - 1.0; 
 
 % Netwton Raphson
@@ -74,7 +74,7 @@ while ~doStop
    i = i + 1;
 
    idx = [ones(1, s(i-1)), zeros(1, J - s(i-1))]';
-   [dummy, KLdiv_s]  = optimizeEntropy(p, idx', 0.05, [ones(1, J); X'; (idx .* X)'], [1; view.mu; 0.05 * view.CVaR95]);
+   [dummy, KLdiv_s]  = optimizeEntropy(  p, idx', 0.05, [ones(1, J); X'; (idx .* X)'], [1; view.mu; 0.05 * view.CVaR95]);
    %[dummy, KLdiv_s]  = optimizeEntropy(p, [idx'; (idx .* X)'], [0.05; 0.05 * view.CVaR95], [ones(1, J); X'], [1; view.mu]);
    
    idx = [ones(1, s(i-1) + 1), zeros(1, J - s(i-1) - 1)]';
